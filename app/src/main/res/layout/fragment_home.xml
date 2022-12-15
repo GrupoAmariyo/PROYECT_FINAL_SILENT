@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#0FD1EA"
+    tools:context=".HomeFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="693dp"
+        android:src="@drawable/logoestirao2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="730dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fltCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="279dp"
+            android:layout_gravity="bottom|end"
+            android:clickable="true"
+            android:layout_marginTop="10dp"
+            android:src="@android:drawable/ic_dialog_email"
+            app:rippleColor="#3F51B5"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </LinearLayout>
+
+</FrameLayout>
+

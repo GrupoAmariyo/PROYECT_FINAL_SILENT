@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4BBDF1"
+    tools:context=".LocalizacionFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fltLLamar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right"
+        android:layout_marginRight="25dp"
+        android:clickable="true"
+        android:src="@android:drawable/stat_sys_phone_call_forward"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|left"
+        android:layout_marginLeft="25dp"
+        android:fontFamily="@font/alata"
+        android:text="CONTACTO"
+        android:textColor="#070101"
+        android:textSize="34sp" />
+
+</FrameLayout>
