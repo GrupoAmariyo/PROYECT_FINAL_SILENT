@@ -16,7 +16,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
-    FloatingActionButton correo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         DrawerLayout r=findViewById(R.id.draweer);
         ImageView menu=findViewById(R.id.menuImg);
-        correo=findViewById(R.id.fltCorreo);
+
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,15 +33,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        correo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                emailIntent.setType("text/plain");
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"silentmotors@gmail.com"});
-                startActivity(emailIntent);
-            }
-        });
+
 
 
         NavigationView nv=findViewById(R.id.nav);

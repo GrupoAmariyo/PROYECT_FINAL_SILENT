@@ -65,7 +65,17 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root=inflater.inflate(R.layout.fragment_home, container, false);
+        correo = root.findViewById(R.id.fltCorreo);
 
+        correo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                emailIntent.setType("text/plain");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"silentmotors@gmail.com"});
+                startActivity(emailIntent);
+            }
+        });
 
         return root;
     }
