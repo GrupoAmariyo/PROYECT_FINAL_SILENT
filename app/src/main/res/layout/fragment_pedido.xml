@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spnPedidos"
             android:layout_width="370dp"
             android:layout_height="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -22,7 +22,45 @@
             app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.109" />
+            app:layout_constraintVertical_bias="0.259" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="200dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="128dp"
+            android:text="Añadir pedido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spnPedidos" />
+
+        <Button
+            android:id="@+id/btnBorrar"
+            android:layout_width="200dp"
+            android:layout_height="53dp"
+            android:text="Borrar pedido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
+
+        <Button
+            android:id="@+id/btnVer"
+            android:layout_width="200dp"
+            android:layout_height="53dp"
+            android:text="Ver pedido"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBorrar" />
+
+        <Button
+            android:id="@+id/btnImport"
+            android:layout_width="200dp"
+            android:layout_height="53dp"
+            android:text="Importar pedidos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnVer" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

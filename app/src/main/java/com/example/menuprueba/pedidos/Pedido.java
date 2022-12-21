@@ -3,7 +3,7 @@ package com.example.menuprueba.pedidos;
 import java.util.ArrayList;
 
 public class Pedido {
-
+    private int id;
     private int partner;
     private int factura;
     private int transportista;
@@ -14,7 +14,8 @@ public class Pedido {
 
     }
 
-    public Pedido(int p, int f, int t, int c){
+    public Pedido(int id, int p, int f, int t, int c){
+        this.id = id;
         partner = p;
         factura = f;
         transportista = t;
@@ -22,7 +23,8 @@ public class Pedido {
         detalles = new ArrayList<Detalle>();
     }
 
-    public Pedido(int p, int f, int t, int c, ArrayList<Detalle> d){
+    public Pedido(int id, int p, int f, int t, int c, ArrayList<Detalle> d){
+        this.id = id;
         partner = p;
         factura = f;
         transportista = t;
@@ -30,6 +32,9 @@ public class Pedido {
         detalles = d;
     }
 
+
+
+    public int getId() {return id;}
     public int getPartner() {
         return partner;
     }
@@ -43,6 +48,7 @@ public class Pedido {
         return comercial;
     }
 
+    public void setId(int id) {this.id = id;}
     public void setPartner(int partner) {
         this.partner = partner;
     }
@@ -74,7 +80,7 @@ public class Pedido {
 
     @Override
     public String toString() {
-        return "Pedido [partner=" + partner + ", factura=" + factura + ", transportista=" + transportista
+        return "Pedido "+id+" [partner=" + partner + ", factura=" + factura + ", transportista=" + transportista
                 + ", comercial=" + comercial + ", detalles=" + detalles + "]";
     }
 }

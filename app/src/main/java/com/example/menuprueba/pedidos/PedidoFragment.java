@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Spinner;
 
 import com.example.menuprueba.R;
 
@@ -65,6 +66,8 @@ public class PedidoFragment extends Fragment {
         return fragment;
     }
 
+    Spinner spinPedidos;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,7 +80,6 @@ public class PedidoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
 
         return inflater.inflate(R.layout.fragment_pedido, container, false);
     }
@@ -100,7 +102,13 @@ public class PedidoFragment extends Fragment {
                     Element element = (Element) node;
                     ArrayList<Detalle> detalles = new ArrayList<>();
                     Pedido pedido;
-                    int partner, factura, trans, comer;
+                    int id, partner, factura, trans, comer;
+
+                    try {
+                        id = Integer.parseInt(element.getAttribute("id"));
+                    } catch (NumberFormatException enu) {
+                        id = 0;
+                    }
 
                     try {
                         partner = Integer.parseInt(element.getElementsByTagName("partner").item(0).getTextContent());
@@ -153,7 +161,7 @@ public class PedidoFragment extends Fragment {
                         }
                     }
 
-                    pedido = new Pedido(partner, factura, trans, comer, detalles);
+                    pedido = new Pedido(id, partner, factura, trans, comer, detalles);
                     pedidos.add(pedido);
                 }
             }
