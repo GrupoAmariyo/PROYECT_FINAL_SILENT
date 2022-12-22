@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import com.example.menuprueba.R;
@@ -67,7 +69,6 @@ public class PedidoFragment extends Fragment {
     }
 
     Spinner spinPedidos;
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,8 +81,16 @@ public class PedidoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View root=inflater.inflate(R.layout.fragment_pedido, container, false);
+        spinPedidos = root.findViewById(R.id.spnPedidos);
 
-        return inflater.inflate(R.layout.fragment_pedido, container, false);
+        leerPedidos();
+
+
+
+
+
+        return root;
     }
 
     public static void leerPedidos() {
