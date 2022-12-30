@@ -17,12 +17,12 @@
         tools:layout="@layout/fragment_localizacion" />
     <fragment
         android:id="@+id/menuPartner"
-        android:name="com.example.menuprueba.PartnersFragment"
+        android:name="com.example.menuprueba.partners.PartnersFragment"
         android:label="Partners"
         tools:layout="@layout/fragment_partners" />
     <fragment
         android:id="@+id/menuPedido"
-        android:name="com.example.menuprueba.pedidos.PedidoFragment"
+        android:name="com.example.menuprueba.PedidoFragment"
         android:label="Pedidos"
         tools:layout="@layout/fragment_pedido" />
     <fragment

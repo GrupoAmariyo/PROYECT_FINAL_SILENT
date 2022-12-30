@@ -7,10 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
@@ -23,8 +25,9 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
  * create an instance of this fragment.
  */
 public class LocalizacionFragment extends Fragment  {
-    private GoogleMap mapa;
-    private FloatingActionButton llamar;
+    GoogleMap gm;
+    MapView mapView;
+    FloatingActionButton llamar;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -75,9 +78,6 @@ public class LocalizacionFragment extends Fragment  {
         // Inflate the layout for this fragment
 
         View root=inflater.inflate(R.layout.fragment_localizacion, container, false);
-
-
-
         llamar=root.findViewById(R.id.fltLLamar);
 
 
